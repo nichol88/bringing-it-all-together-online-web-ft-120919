@@ -78,6 +78,7 @@ class Dog
     SELECT * FROM dogs
     WHERE name = ?
     LIMIT 1
+    ;
     SQL
 
     row = DB[:conn].execute(sql, name)[0]
