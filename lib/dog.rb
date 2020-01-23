@@ -63,7 +63,7 @@ class Dog
       ;
     SQL
 
-    if !DB[:conn].execute(sql, self.name, self.breed)
+    if !DB[:conn].execute(sql, name, breed)
       self.new(:name, :breed)
     end
   end
