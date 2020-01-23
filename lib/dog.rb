@@ -62,7 +62,9 @@ class Dog
       LIMIT 1
       ;
     SQL
-    self.new(name, breed) if !sql
-    DB[:conn].execute(sql, self.name, self.breed)
+    
+    if !DB[:conn].execute(sql, self.name, self.breed)
+      self.new(name, breed)
+    end
   end
 end
