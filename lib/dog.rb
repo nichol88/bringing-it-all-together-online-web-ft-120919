@@ -80,7 +80,7 @@ class Dog
     LIMIT 1
     SQL
 
-    row_array = DB[:conn].execute(sql, name)
+    row = DB[:conn].execute(sql, name)[0]
 
 
   end
