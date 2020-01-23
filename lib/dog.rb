@@ -54,4 +54,13 @@ class Dog
     SQL
     self.new_from_db(DB[:conn].execute(sql, id)[0])
   end
+
+  def self.find_or_create_by
+    sql = <<-SQL
+      SELECT * FROM dogs
+      WHERE
+      ;
+    SQL
+    DB[:conn].execute(sql, self.name, self.breed)
+  end
 end
