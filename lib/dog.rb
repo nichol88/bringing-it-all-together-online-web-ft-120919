@@ -68,7 +68,7 @@ class Dog
     if !dog
       self.create(name: name, breed: breed)
     else
-      self.new(name: name, breed: breed)
+      self.new(id: dog[0], name: name, breed: breed)
     end
 
   end
