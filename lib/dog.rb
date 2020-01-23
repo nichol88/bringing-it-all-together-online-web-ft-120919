@@ -64,7 +64,8 @@ class Dog
     SQL
     dog = DB[:conn].execute(sql, name, breed)[0]
 
+    if !dog
     self.create(name: name, breed: breed) if !dog
-    
+
   end
 end
