@@ -62,7 +62,7 @@ class Dog
       LIMIT 1
       ;
     SQL
-    dog = DB[:conn].execute(sql, name, breed)
+    dog = DB[:conn].execute(sql, name, breed)[0]
     self.create(name: name, breed: breed) if !dog
   end
 end
