@@ -80,7 +80,7 @@ class Dog
     SQL
 
     row = DB[:conn].execute(sql, name)
-    
+
 
   end
 end
